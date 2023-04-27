@@ -1,7 +1,7 @@
-from haystack import Document
 from haystack.document_stores import InMemoryDocumentStore
-from haystack.pipelines import SearchSummarizationPipeline
 from haystack.nodes import BM25Retriever, TransformersSummarizer
+from haystack.pipelines import SearchSummarizationPipeline
+from haystack.schema import Document
 
 
 def test_summarization_pipeline():

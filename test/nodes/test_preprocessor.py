@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-from typing import Any, Optional, List
+from typing import Any, List, Optional
 from unittest.mock import Mock
 
 import nltk.data
@@ -8,10 +8,9 @@ import pytest
 from _pytest.monkeypatch import MonkeyPatch
 from _pytest.tmpdir import TempPathFactory
 
-from haystack import Document
 from haystack.nodes.file_converter.pdf import PDFToTextConverter
 from haystack.nodes.preprocessor.preprocessor import PreProcessor
-
+from haystack.schema import Document
 
 TEXT = """
 This is a sample sentence in paragraph_1. This is a sample sentence in paragraph_1. This is a sample sentence in

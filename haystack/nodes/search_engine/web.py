@@ -1,9 +1,9 @@
 import pydoc
-from typing import List, Dict, Any, Optional, Union, Tuple, Type
+from typing import Any, Dict, List, Optional, Tuple, Type, Union
 
 from haystack.nodes.base import BaseComponent
-from haystack import MultiLabel, Document
 from haystack.nodes.search_engine.base import SearchEngine
+from haystack.schema import Document, MultiLabel
 
 
 class WebSearch(BaseComponent):

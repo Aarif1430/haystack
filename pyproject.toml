@@ -4,6 +4,36 @@ requires = [
 ]
 build-backend = "hatchling.build"
 
+[tool.poetry]
+name = "farm-haystack"
+version = "0.1.0"
+description = "Neural Question Answering & Semantic Search at Scale. Use modern transformer based models like BERT to find answers in large document collections"
+readme = "README.md"
+license = "Apache-2.0"
+authors = ["Aarif1430 <malikarif13@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+types-PyYAML = "^6.0.12"
+types-requests = "^2.28.11"
+types-six = "^1.16.21"
+pandas = "^2.0.1"
+torch = "^2.0.0"
+transformers = "^4.28.1"
+mmh3 = "^3.1.0"
+pydantic = "^1.10.7"
+azure-ai-formrecognizer = "^3.2.1"
+posthog = "^3.0.1"
+sseclient = "^0.0.27"
+tenacity = "^8.2.2"
+tiktoken = "^0.3.3"
+sentence-transformers = "^2.2.2"
+dill = "^0.3.6"
+rank-bm25 = "^0.2.2"
+boilerpy3 = "^1.0.6"
+quantulum3 = "^0.8.1"
+elasticsearch = "7.13.4"
+
 [project]
 name = "farm-haystack"
 dynamic = [

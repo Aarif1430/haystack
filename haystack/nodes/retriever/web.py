@@ -3,19 +3,18 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from multiprocessing import cpu_count
-from typing import Any, Dict, Iterator, List, Optional, Literal, Union
+from typing import Any, Dict, Iterator, List, Literal, Optional, Union
 from unicodedata import combining, normalize
 
 import requests
 from boilerpy3 import extractors
 
-from haystack import Document, __version__
+from haystack import __version__
 from haystack.document_stores.base import BaseDocumentStore
 from haystack.nodes.preprocessor import PreProcessor
 from haystack.nodes.retriever.base import BaseRetriever
-from haystack.nodes.search_engine.web import SearchEngine
-from haystack.nodes.search_engine.web import WebSearch
-from haystack.schema import FilterType
+from haystack.nodes.search_engine.web import SearchEngine, WebSearch
+from haystack.schema import Document, FilterType
 
 logger = logging.getLogger(__name__)
 

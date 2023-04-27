@@ -1,11 +1,11 @@
-from typing import List
 from pathlib import Path
+from typing import List
 
 import pytest
 
-from haystack import Document
 from haystack.document_stores import BaseDocumentStore
-from haystack.nodes import QuestionGenerator, EmbeddingRetriever, PseudoLabelGenerator
+from haystack.nodes import EmbeddingRetriever, PseudoLabelGenerator, QuestionGenerator
+from haystack.schema import Document
 
 
 @pytest.mark.generator

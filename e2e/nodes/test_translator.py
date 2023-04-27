@@ -1,5 +1,5 @@
-from haystack import Document
 from haystack.nodes import TransformersTranslator
+from haystack.schema import Document
 
 
 def test_translator():

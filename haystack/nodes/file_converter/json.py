@@ -1,14 +1,11 @@
 import json
-from json import JSONDecodeError
-
-from typing import List, Optional, Any, Dict
-
 import logging
+from json import JSONDecodeError
 from pathlib import Path
+from typing import Any, Dict, List, Optional
 
-from haystack import Document
 from haystack.nodes.file_converter import BaseConverter
-
+from haystack.schema import Document
 
 logger = logging.getLogger(__name__)
 

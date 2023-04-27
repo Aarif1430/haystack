@@ -1,9 +1,9 @@
-from abc import abstractmethod
-from typing import Optional, List, Tuple, Dict, Union, Any
 import warnings
+from abc import abstractmethod
+from typing import Any, Dict, List, Optional, Tuple, Union
 
-from haystack import MultiLabel, Document, Answer
 from haystack.nodes.base import BaseComponent
+from haystack.schema import Answer, Document, MultiLabel
 
 
 class JoinNode(BaseComponent):

@@ -1,12 +1,11 @@
 import pytest
 
 from haystack.nodes import TextConverter
-from haystack.nodes.retriever.sparse import BM25Retriever
-from haystack.nodes.reader import FARMReader
-from haystack.pipelines import Pipeline
-from haystack import Document
-
 from haystack.nodes.extractor import EntityExtractor, simplify_ner_for_qa
+from haystack.nodes.reader import FARMReader
+from haystack.nodes.retriever.sparse import BM25Retriever
+from haystack.pipelines import Pipeline
+from haystack.schema import Document
 
 
 @pytest.fixture

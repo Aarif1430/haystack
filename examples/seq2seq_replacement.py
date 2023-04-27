@@ -1,5 +1,5 @@
-from haystack import Document
 from haystack.nodes import PromptNode, PromptTemplate
+from haystack.schema import Document
 
 p = PromptNode("vblagoje/bart_lfqa")
 
