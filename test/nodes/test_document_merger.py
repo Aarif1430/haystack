@@ -1,7 +1,7 @@
 import pytest
 
-from haystack import Document
 from haystack.nodes.other.document_merger import DocumentMerger
+from haystack.schema import Document
 
 
 @pytest.fixture

@@ -1,8 +1,7 @@
 import pytest
 
-
-from haystack import Document
 from haystack.nodes.other.join_docs import JoinDocuments
+from haystack.schema import Document
 
 
 @pytest.mark.unit

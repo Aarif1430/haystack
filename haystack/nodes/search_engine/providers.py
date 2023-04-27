@@ -1,11 +1,11 @@
 import json
 import logging
-from typing import Dict, List, Union, Optional, Any
+from typing import Any, Dict, List, Optional, Union
 
 import requests
 
-from haystack import Document
 from haystack.nodes.search_engine.base import SearchEngine
+from haystack.schema import Document
 
 logger = logging.getLogger(__name__)
 

@@ -1,33 +1,34 @@
-from typing import List, Optional, Tuple, Dict, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 try:
     from typing import Literal
 except ImportError:
     from typing_extensions import Literal  # type: ignore
 
-import logging
 import itertools
+import logging
 from statistics import mean
-import torch
+
 import numpy as np
 import pandas as pd
+import torch
 from quantulum3 import parser
 from transformers import (
-    TapasTokenizer,
-    TapasForQuestionAnswering,
-    AutoTokenizer,
     AutoModelForSequenceClassification,
+    AutoTokenizer,
     BatchEncoding,
-    TapasModel,
-    TapasConfig,
     TableQuestionAnsweringPipeline,
+    TapasConfig,
+    TapasForQuestionAnswering,
+    TapasModel,
+    TapasTokenizer,
 )
 from transformers.models.tapas.modeling_tapas import TapasPreTrainedModel
 
 from haystack.errors import HaystackError
-from haystack.schema import Document, Answer, TableCell, Span
-from haystack.nodes.reader.base import BaseReader
 from haystack.modeling.utils import initialize_device_settings
+from haystack.nodes.reader.base import BaseReader
+from haystack.schema import Answer, Document, Span, TableCell
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +41,7 @@ class TableReader(BaseReader):
 
     Example:
     ```python
-    from haystack import Document
+    from haystack.schema import Document
     from haystack.nodes import TableReader
     import pandas as pd
 

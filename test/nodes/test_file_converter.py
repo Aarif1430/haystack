@@ -11,7 +11,6 @@ from unittest.mock import patch
 import pandas as pd
 import pytest
 
-from haystack import Document
 from haystack.nodes import (
     AzureConverter,
     CsvTextConverter,
@@ -25,6 +24,7 @@ from haystack.nodes import (
     TextConverter,
     TikaConverter,
 )
+from haystack.schema import Document
 
 from ..conftest import fail_at_version
 

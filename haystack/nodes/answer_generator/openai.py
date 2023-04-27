@@ -2,16 +2,16 @@ import logging
 import os
 from typing import List, Optional, Tuple, Union
 
-from haystack import Document
 from haystack.environment import HAYSTACK_REMOTE_API_TIMEOUT_SEC
 from haystack.nodes.answer_generator import BaseGenerator
 from haystack.nodes.prompt import PromptTemplate
+from haystack.schema import Document
 from haystack.utils.openai_utils import (
+    _check_openai_finish_reason,
+    _openai_text_completion_tokenization_details,
+    count_openai_tokens,
     load_openai_tokenizer,
     openai_request,
-    count_openai_tokens,
-    _openai_text_completion_tokenization_details,
-    _check_openai_finish_reason,
 )
 
 logger = logging.getLogger(__name__)

@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from haystack import Document
 from haystack.nodes.search_engine.utils import calculate_ranking_scores
+from haystack.schema import Document
 
 
 class SearchEngine(ABC):

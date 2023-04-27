@@ -12,12 +12,10 @@ from haystack.nodes.preprocessor import PreProcessor
 from haystack.pipelines import Pipeline
 from haystack.utils import fetch_archive_from_http, launch_es, print_answers
 
-PINECONE_API_KEY = "bb0b765c-adf3-4885-9fec-978aed28bb71"
-PINECONE_API_ENV = "us-east4-gcp"
-EL = "datapulse.es.asia-south1.gcp.elastic-cloud.com"
-Username = "elastic"
-Password = "2o8L3b9bPbtmxjevMI2T0h8f"
-ca_path = "/Users/aarifmalik/Downloads/68B60174F6C815CCAA979972697B51EB83B8278D.crt"
+EL = ""
+Username = ""
+Password = ""
+ca_path = ""
 
 
 def basic_qa_pipeline():

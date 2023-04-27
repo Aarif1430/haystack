@@ -18,7 +18,7 @@ When applicable, write a snippet of code showing how the new feature would be us
 ```python
 import pandas as pd
 from haystack.nodes import TableReader
-from haystack import Document
+from haystack.schema import Document
 
 data = {
     "actors": ["brad pitt", "leonardo di caprio", "george clooney"],
@@ -141,7 +141,7 @@ converted to a list of lists.
 For example, the following code
 ```python
 import pandas as pd
-from haystack import Document
+from haystack.schema import Document
 
 data = {
     "actors": ["brad pitt", "leonardo di caprio", "george clooney"],

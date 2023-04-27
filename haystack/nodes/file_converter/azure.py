@@ -1,18 +1,17 @@
-import logging
-from pathlib import Path
-from typing import List, Optional, Dict, Any
-from collections import defaultdict
-import json
 import copy
+import json
+import logging
+from collections import defaultdict
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
-from azure.ai.formrecognizer import DocumentAnalysisClient, AnalyzeResult
-from azure.core.credentials import AzureKeyCredential
 import pandas as pd
+from azure.ai.formrecognizer import AnalyzeResult, DocumentAnalysisClient
+from azure.core.credentials import AzureKeyCredential
 
-from haystack.nodes.file_converter.base import BaseConverter
 from haystack.errors import HaystackError
+from haystack.nodes.file_converter.base import BaseConverter
 from haystack.schema import Document
-
 
 logger = logging.getLogger(__name__)
 

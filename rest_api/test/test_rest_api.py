@@ -1,26 +1,24 @@
 # mypy: disable_error_code = "empty-body, override, union-attr"
 
-from typing import Dict, List, Optional, Union, Generator
-
 import os
 from pathlib import Path
 from textwrap import dedent
+from typing import Dict, Generator, List, Optional, Union
 from unittest import mock
 from unittest.mock import MagicMock, Mock
+
 import numpy as np
 import pandas as pd
-
+import posthog
 import pytest
 from fastapi.testclient import TestClient
-import posthog
-from haystack import Document, Answer, Pipeline, TableCell
+
 import haystack
-from haystack.nodes import BaseReader, BaseRetriever
 from haystack.document_stores import BaseDocumentStore
 from haystack.errors import PipelineSchemaError
-from haystack.schema import Label, FilterType
+from haystack.nodes import BaseReader, BaseRetriever
 from haystack.nodes.file_converter import BaseConverter
-
+from haystack.schema import Answer, Document, FilterType, Label, Pipeline, TableCell
 from rest_api.pipeline import _load_pipeline
 from rest_api.utils import get_app
 

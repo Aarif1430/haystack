@@ -1,14 +1,14 @@
-import os
 import logging
-from typing import Optional, Union, List, Dict, Any, Tuple
-from unittest.mock import patch, Mock, MagicMock
+import os
+from typing import Any, Dict, List, Optional, Tuple, Union
+from unittest.mock import MagicMock, Mock, patch
 
 import pytest
 from transformers import AutoTokenizer, GenerationConfig
 
-from haystack import Document, Pipeline, BaseComponent, MultiLabel
-from haystack.nodes.prompt import PromptTemplate, PromptNode, PromptModel
+from haystack.nodes.prompt import PromptModel, PromptNode, PromptTemplate
 from haystack.nodes.prompt.invocation_layer import HFLocalInvocationLayer
+from haystack.schema import BaseComponent, Document, MultiLabel, Pipeline
 
 
 def skip_test_for_invalid_key(prompt_model):

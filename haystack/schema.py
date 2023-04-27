@@ -1,34 +1,32 @@
 from __future__ import annotations
+
 import csv
 import hashlib
 import inspect
-
-from typing import Any, Optional, Dict, List, Union
+from typing import Any, Dict, List, Optional, Union
 
 try:
     from typing import Literal
 except ImportError:
     from typing_extensions import Literal  # type: ignore
 
-from pathlib import Path
-from uuid import uuid4
+import ast
+import json
 import logging
 import time
-import json
-import ast
 from dataclasses import asdict
+from pathlib import Path
+from uuid import uuid4
 
 import mmh3
 import numpy as np
 import pandas as pd
-
 from pydantic import BaseConfig, Field
-from pydantic.json import pydantic_encoder
 
 # We are using Pydantic dataclasses instead of vanilla Python's
 # See #1598 for the reasons behind this choice & performance considerations
 from pydantic.dataclasses import dataclass
-
+from pydantic.json import pydantic_encoder
 
 logger = logging.getLogger(__name__)
 

@@ -1,13 +1,11 @@
-from typing import Union, List, Optional, Any, Dict
-
 import logging
 from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
 
 import pandas as pd
 
-from haystack import Document
 from haystack.nodes.file_converter import BaseConverter
-
+from haystack.schema import Document
 
 logger = logging.getLogger(__name__)
 
@@ -46,7 +44,7 @@ class CsvTextConverter(BaseConverter):
         if not isinstance(file_path, list):
             file_path = [file_path]
 
-        docs: List[Document] = []
+        docs: List[DocumentType] = []
         for path in file_path:
             df = pd.read_csv(path, encoding=encoding)
 
@@ -64,6 +62,6 @@ class CsvTextConverter(BaseConverter):
                     dictionary["meta"] = meta
                 if id_hash_keys:
                     dictionary["id_hash_keys"] = id_hash_keys
-                docs.append(Document.from_dict(dictionary))
+                docs.append(DocumentType.from_dict(dictionary))
 
         return docs

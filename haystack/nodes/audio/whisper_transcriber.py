@@ -1,14 +1,13 @@
 import json
-
-from typing import List, Optional, Dict, Any, Union, BinaryIO, Literal
+from typing import Any, BinaryIO, Dict, List, Literal, Optional, Union
 
 import requests
 import torch
 from requests import PreparedRequest
 
-from haystack import MultiLabel, Document
 from haystack.errors import OpenAIError, OpenAIRateLimitError
 from haystack.nodes.base import BaseComponent
+from haystack.schema import Document, MultiLabel
 from haystack.utils.import_utils import is_whisper_available
 
 WhisperModel = Literal["tiny", "small", "medium", "large", "large-v2"]

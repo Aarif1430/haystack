@@ -1,7 +1,7 @@
-from haystack import Document
-from haystack.pipelines import TranslationWrapperPipeline, GenerativeQAPipeline
 from haystack.document_stores import InMemoryDocumentStore
 from haystack.nodes import DensePassageRetriever, RAGenerator, TransformersTranslator
+from haystack.pipelines import GenerativeQAPipeline, TranslationWrapperPipeline
+from haystack.schema import Document
 
 
 def test_generative_pipeline_with_translator():
