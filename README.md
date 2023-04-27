@@ -135,7 +135,7 @@ If you want to contribute to the Haystack repo, check our [Contributor Guideline
 
 See the list of [dependencies](https://github.com/deepset-ai/haystack/blob/main/pyproject.toml) to check which ones you want to install (for example, `[all]`, `[dev]`, or other).
 
-**Installing the REST API** 
+**Installing the REST API**
 
 Haystack comes packaged with a REST API so that you can deploy it as a service. Run the following command from the root directory of the Haystack repo to install REST_API:
 
@@ -186,3 +186,29 @@ Here's a list of organizations that we know about from our community. Don't hesi
 -   [PostHog](https://posthog.com/)
 -   [Rakuten](https://www.rakuten.com/)
 -   [Sooth.ai](https://sooth.ai/)
+
+
+
+
+## How to get changes from parent repo
+1. Add the parent repository as an upstream remote: Navigate to the cloned repository and add the parent repository as an upstream remote. This allows you to fetch changes from the parent repository. Use the following command:
+```shell
+git remote add upstream <parent_repository_url>
+```
+2. Fetch changes from the upstream remote: Fetch any changes made to the parent repository using the following command:
+```shell
+git fetch upstream
+```
+3. Merge upstream changes into your local branch: Once you have fetched the changes from the upstream remote, you need to merge them into your local branch. Checkout your branch and merge the changes using the following commands:
+```shell
+git checkout <your_branch_name>
+git merge upstream/main
+```
+4. Commit the merge: After resolving the conflicts, commit the merge using the following command:
+```shell
+git commit -m "Merge upstream changes into <your_branch_name>"
+```
+5. Push changes to your forked repository: Once the merge commit is completed, push the changes to your forked repository using the following command:
+```shell
+git push origin <your_branch_name>
+```
